@@ -1,6 +1,8 @@
 import { readFileSync } from 'fs';
+import path = require('path');
 const readInput = (day: number, runSample: boolean) => {
-	return readFileSync(`${day}/${day}${runSample ? '_sample' : ''}.txt`).toString();
+  const file = path.normalize(`${day}/${day}${runSample ? '_sample' : ''}.txt`)
+	return readFileSync(path.resolve(file)).toString();
 }
 
 export default readInput;
