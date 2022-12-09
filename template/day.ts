@@ -1,9 +1,10 @@
 import readInput from "../input.helper";
-const runSample = false; 
+const runSample = true; 
 type Input = any;
 
 const parseData = (): Input => {
     console.time("parseData")
+    readInput(1,runSample)
     console.timeEnd("parseData")
 }
 
