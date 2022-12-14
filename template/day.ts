@@ -21,5 +21,5 @@ const sol2 = (input: Input) => {
 }
 
 const input = parseData();
-console.log(`Solution 1: ${sol1(input)}`);
-console.log(`Solution 2: ${sol2(input)}`);
+console.log(`Solution 1: ${sol1(JSON.parse(JSON.stringify(input)))}`);
+console.log(`Solution 2: ${sol2(JSON.parse(JSON.stringify(input)))}`);
