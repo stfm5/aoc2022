@@ -63,7 +63,7 @@ let map: SMap<number>= {}
 const minmax = (input: SMap<number>, minutes: number, currPipe: string, myTurn: boolean) => {
   const cave: SMap<number> = {...input};
   if(minutes === 0) {
-    return myTurn ? minmax(cave, 26, "AA", false) : 0;
+    return myTurn ? minmax(cave, secondStartsAt, "AA", false) : 0;
   }
   let hash = `${currPipe},${Object.values(input)},${minutes},${myTurn}`
   if(map[hash] >= 0) {
